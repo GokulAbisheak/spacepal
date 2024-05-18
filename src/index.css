@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.stars {
+  background: url("assets/stars.png")
+    repeat;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+  animation: blink 200ms linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100vh;
+  background: transparent
+    url("assets/clouds_repeat.png")
+    repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  bottom: 0;
+  z-index: 3;
+
+  -moz-animation: move-background 10s linear infinite;
+  -ms-animation: move-background 10s linear infinite;
+  -o-animation: move-background 10s linear infinite;
+  -webkit-animation: move-background 10s linear infinite;
+  animation: move-background 10s linear infinite;
+}
+
+.moon {
+  margin-top: 150px;
+  height: 60vh;
+  width: 60vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
